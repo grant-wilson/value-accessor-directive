@@ -1,0 +1,12 @@
+<div>Form</div>
+<form [formGroup]="form">
+  <app-custom formControlName="counter"></app-custom>
+  <br />
+  <button type="reset">Reset</button>
+  <br />
+  <button (click)="form.disabled ? form.enable() : form.disable()">
+    {{ form.disabled ? "Enable" : "Disable" }}
+  </button>
+</form>
+<div>Form Value</div>
+<pre>{{ form.value | json }}</pre>
